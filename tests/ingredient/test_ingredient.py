@@ -1,6 +1,39 @@
-from src.models.ingredient import Ingredient  # noqa: F401, E261, E501
+from src.models.ingredient import (
+    Ingredient,
+    Restriction,
+)  # noqa: F401, E261, E501
+import pytest
 
 
 # Req 1
 def test_ingredient():
-    pass
+    ingredient1 = Ingredient("queijo mussarela")
+    assert ingredient1.name == "queijo mussarela"
+    assert ingredient1.restrictions == {
+        Restriction.LACTOSE,
+        Restriction.ANIMAL_DERIVED,
+    }
+    ingredient2 = Ingredient("farinha")
+    assert repr(ingredient2) == "Ingredient('farinha')"
+
+    ingredient3 = Ingredient("bacon")
+    ingredient4 = Ingredient("bacon")
+    ingredient5 = Ingredient("queijo provolone")
+
+    assert ingredient3 == ingredient4
+    assert ingredient3 != ingredient1
+    assert ingredient1 != ingredient5
+    assert hash(ingredient3) == hash(ingredient4)
+    assert hash(ingredient4) != hash(ingredient1)
+
+    assert ingredient3.restrictions == {
+        Restriction.ANIMAL_MEAT,
+        Restriction.ANIMAL_DERIVED,
+    }
+
+    ingredient9 = Ingredient("massa de lasanha")
+    assert ingredient9.name == "massa de lasanha"
+    assert ingredient9.restrictions == {
+        Restriction.LACTOSE,
+        Restriction.GLUTEN,
+    }
