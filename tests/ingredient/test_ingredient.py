@@ -2,7 +2,6 @@ from src.models.ingredient import (
     Ingredient,
     Restriction,
 )  # noqa: F401, E261, E501
-import pytest
 
 
 # Req 1
@@ -31,9 +30,9 @@ def test_ingredient():
         Restriction.ANIMAL_DERIVED,
     }
 
-    ingredient9 = Ingredient("massa de lasanha")
-    assert ingredient9.name == "massa de lasanha"
-    assert ingredient9.restrictions == {
+    ingredient6 = Ingredient("massa de lasanha")
+    assert ingredient6.name == "massa de lasanha"
+    assert ingredient6.restrictions == {
         Restriction.LACTOSE,
         Restriction.GLUTEN,
     }
