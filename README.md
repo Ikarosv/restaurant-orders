@@ -10,9 +10,7 @@ Projeto em **Python**, com estrutura de **pacote instalável**, uso de **testes 
 
 * **Python 3.8+**
 * **pytest** – para testes
-* **click** – para criação de CLI (linha de comando)
 * **flake8** – para análise de estilo de código
-* **coverage** – para análise de cobertura dos testes
 
 ## 🗂️ Estrutura do projeto
 
