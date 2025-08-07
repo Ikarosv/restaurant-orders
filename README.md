@@ -1,54 +1,69 @@
 # restaurant‑orders
 
-**Repositório**: sistema de gerenciamento de pedidos para restaurante.
+**Repositório**: sistema de gerenciamento de pedidos para restaurante desenvolvido no curso da Trybe.
 
-## Sobre
+## 🧾 Sobre
 
-Um projeto em **Python**, com estrutura de **pacote instalável** e uma suíte de **testes automatizados**, ideal pra gerenciar fluxo de pedidos num ambiente de restaurante digital.
+Projeto em **Python**, com estrutura de **pacote instalável**, uso de **testes automatizados** e foco na lógica de gerenciamento de pedidos em restaurantes.
 
-## Estrutura
+## 📦 Tecnologias e bibliotecas utilizadas
 
-```text
+* **Python 3.8+**
+* **pytest** – para testes
+* **click** – para criação de CLI (linha de comando)
+* **flake8** – para análise de estilo de código
+* **coverage** – para análise de cobertura dos testes
+
+## 🗂️ Estrutura do projeto
+
+```
 .
-├── data/                 # Arquivos de dados (se houver)
-├── src/                  # Código-fonte principal
-├── tests/                # Casos de teste automatizados
-├── setup.py              # Script de instalação do pacote
-├── requirements.txt      # Dependências do projeto
-├── dev-requirements.txt  # Dependências para desenvolvimento/testing
-└── pyproject.toml        # Metadados do projeto
+├── data/                 # Arquivos de dados (CSV, etc)
+├── src/restaurant_orders/  # Código-fonte principal
+├── tests/                # Testes automatizados
+├── setup.py              # Script de instalação
+├── requirements.txt      # Dependências da aplicação
+├── dev-requirements.txt  # Dependências para desenvolvimento/testes
+└── pyproject.toml        # Configurações de build e metadata
 ```
 
-## Instalação
+## 🚀 Instalação
 
 ```bash
 git clone https://github.com/Ikarosv/restaurant-orders.git
 cd restaurant-orders
 
-# Opção 1: instalar diretamente
+# Instalar o pacote
 pip install .
 
-# Opção 2: instalar com dependências dev
+# Instalar dependências de desenvolvimento
 pip install -r dev-requirements.txt
 ```
 
-## Uso
+## ⚙️ Como usar
 
-* Executar o módulo principal:
+Execute o programa via CLI:
 
-  ```bash
-  python -m restaurant_orders
-  ```
+```bash
+python -m restaurant_orders path/to/data.csv
+```
 
-## Testes
+## 🧪 Testes
 
-Para rodar os testes automatizados:
+Para rodar os testes com `pytest`:
 
 ```bash
 pytest
 ```
 
-## Contribuição
+Com relatório de cobertura:
 
-Contribuições são bem-vindas! Pode abrir issues ou pull requests. Sinta-se à vontade para adicionar funcionalidades, melhorar testes ou aprimorar a cobertura.
+```bash
+coverage run -m pytest
+coverage report -m
+```
 
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas!
+Abra uma issue, fork o repositório e envie um pull request com melhorias ou correções.
